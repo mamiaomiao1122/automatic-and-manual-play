@@ -1,0 +1,88 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+	color:red;
+}
+.main{
+	width:1200px;
+	height:450px;
+	margin:30px,30px;
+	overflow: hidden;
+	position: relative;
+}
+.banner{
+	width:1200px;
+	height:450px;
+	overflow: hidden;
+	position: relative;
+}
+.banner-slide{
+	width:600px;
+	height:450px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left:200px;
+	display:none;
+	
+}
+.slide1{
+	background-image: url("../img/a.jpg");
+}
+.slide2{
+	background-image: url("../img/b.jpg");
+}
+.slide3{
+	background-image: url("../img/c.jpg");
+}
+.slide-active{
+	display:block;
+}
+ul{
+	list-style: none;
+}
+.button{
+	position: absolute;
+	width:40px;
+	height:60px;
+	left:200px;
+	top:50%;
+	margin-top: -40px;
+	background:url("../img/arrow.png") no-repeat center center;
+
+}
+.button:hover{
+	background-color:#333;
+	opacity: 0.6;    /*半透明*/
+	filter:alpha(opacity=60);  /*兼容其它浏览器*/
+}
+.prev{
+	transform: rotate(180deg);
+}
+.next{
+	left:auto;
+	right:400px;
+}
+.dots{
+	position: absolute;
+	right: 410px;
+	bottom: 20px;
+	text-align: right;
+
+}
+.dots span{
+	display:inline-block;
+	width:12px;
+	height:12px;
+	border-radius: 50%;
+	background:rgba(7,17,27,0.4);
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset;  /*阴影*/
+	margin-left: 5px;
+	cursor: pointer;
+}
+.dots span.active{
+	box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+	background:#fff;
+}
